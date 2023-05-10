@@ -1,6 +1,6 @@
-#include<iostream>
-#include<movie.h>
-#include<movies.h>
+#include<iostream>  
+#include "movie.h"
+#include "movies.h"
 #include<string>
 
 using namespace std;
@@ -12,7 +12,7 @@ int main(){
     int user_rate, watched;
     while(1){
         cout << "Movie Manager:-" << endl;
-        cout << "<1> Add a movie \n<2> Increase watch count \n<3> Display all movies \n";
+        cout << "<1> Add a movie \n<2> Increase watch count \n<3> Display all movies \n<4> Exit \n\n";
         cout << "Enter your choice: " ;
         cin >> choice;
         switch(choice){
@@ -25,15 +25,17 @@ int main(){
                     cout << "Enter your rating: ";
                     cin >> user_rate;
                     movie_list.add_movie(name, movie_rate, user_rate, watched);
-                    break;
+                    continue;
             case 2: cout << "Enter movie name: ";
                     cin >> name;
                     movie_list.inc_watch_count(name);
-                    break;
+                    continue;
             case 3: movie_list.display_list();
-                    break;
+                    continue;
+            case 4: break;
             default: cout << "Invalid input!\n";
         }
+        break;
     }
     return 0;
 }
