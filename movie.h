@@ -17,6 +17,11 @@ class movie{
         void set_watch_count(int watched);
         void set_movie_rating(string movie_rate);
         void set_user_rating(int user_rate);
+        void increase_watch_count();
+        string get_movie_name();
+        string get_movie_rating();
+        int get_watch_count();
+        int get_user_rating();
 };
 
 #endif
