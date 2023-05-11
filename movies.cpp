@@ -14,27 +14,27 @@ void movies::add_movie(string name, string movie_rate, int user_rate, int watche
             return;
         }
     }
-    movie new_movie;
-    new_movie.set_movie_name(name);
-    new_movie.set_movie_rating(movie_rate);
-    new_movie.set_user_rating(user_rate);
-    new_movie.set_watch_count(watched);
+    movie new_movie(name, movie_rate, user_rate, watched);
     movie_list.push_back(new_movie);
 }  
 
 void movies::inc_watch_count(string name){
-    for(auto it: movie_list){
+    for(auto &it: movie_list){
         string movie_name = it.get_movie_name();
         if(movie_name == name){
             it.increase_watch_count();
-            cout << "Watch count increased by 1. \n";
+            cout << "Watch count increased by 1. \n\n";
             return;
         }
     }
-    cout << "Movie was not found on the list. \n"; 
+    cout << "Movie was not found on the list. \n\n"; 
 }
 
 void movies::display_list(){
+    if(movie_list.empty()){
+        cout << "No movies in the list.\n\n";
+        return;
+    }
     for(auto it: movie_list){
         cout << "Movie: " << it.get_movie_name() << endl;
         cout << "Movie rating: " << it.get_movie_rating() << endl;
