@@ -6,18 +6,15 @@
 using namespace std;
 
 class movie{
-        friend class movies;
         string movie_name;
         int watch_count;
         string movie_rating;
         int user_rating;
 
     public:
-        void set_movie_name(string name);
-        void set_watch_count(int watched);
-        void set_movie_rating(string movie_rate);
-        void set_user_rating(int user_rate);
-        void increase_watch_count();
+        movie();    //constructor
+        movie(string name, string movie_rate, int user_rate, int watched);  //overloaded constructor
+        void increase_watch_count();    
         string get_movie_name();
         string get_movie_rating();
         int get_watch_count();
