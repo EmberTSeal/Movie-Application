@@ -20,3 +20,12 @@ g++ *.cpp
 ```
 ./a.out
 ```
+- In case of range based for loops:
+```
+for(auto it: my_vec)    //this passes by value.
+```
+but,
+```
+for(auto &it: my_vec)   //passes by reference.
+```
+Clearly in my program, as I'm trying to change a movie's value stored in movie_list, I should use reference instead of value for it to actually change.
