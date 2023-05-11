@@ -7,12 +7,11 @@ A movie list management system using CPP in OOP approach.
 - Display all movies in the list
 - Detects duplicate movies, if such input provided
 
-
-## Future Features
-- Prevent display when list is empty.
-- Make it user-friendly.
+## Known Bugs:
+- Watch count increase does not work.
 
 ## Key Learnings
+- Learn about OOP.
 - For compiling multiple files in terminal; use 
 ```
 g++ *.cpp
