@@ -8,7 +8,7 @@ A movie list management system using CPP in OOP approach.
 - Detects duplicate movies, if such input provided
 
 ## Known Bugs:
-- Watch count increase does not work.
+- (None)
 
 ## Key Learnings
 - Learn about OOP.
