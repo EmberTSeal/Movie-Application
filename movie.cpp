@@ -16,7 +16,7 @@ movie::movie(string name, string movie_rate, int user_rate, int watched):
 
 //other funcs:
 void movie::increase_watch_count(){
-    watch_count = watch_count + 1;
+    watch_count = watch_count + 1;  //as we are using reference, this change is saved
 }
 
 string movie::get_movie_name(){

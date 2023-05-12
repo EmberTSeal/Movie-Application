@@ -6,7 +6,7 @@
 
 using namespace std;
 class movies{
-        vector<movie> movie_list; 
+        vector<movie> movie_list;   //a vector of objects (movie) 
     public:
         void add_movie(string name, string movie_rate, int user_rate, int watched);
         void inc_watch_count(string name);

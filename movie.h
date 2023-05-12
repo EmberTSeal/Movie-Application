@@ -13,7 +13,8 @@ class movie{
 
     public:
         movie();    //constructor
-        movie(string name, string movie_rate, int user_rate, int watched);  //overloaded constructor
+        //overloaded constructor with input values
+        movie(string name, string movie_rate, int user_rate, int watched);  
         void increase_watch_count();    
         string get_movie_name();
         string get_movie_rating();
