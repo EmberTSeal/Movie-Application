@@ -7,7 +7,6 @@ using namespace std;
 
 int main(){
     int ch;
-    string choice;
     movies movie_list;
     string name, movie_rate;
     int user_rate, watched;
@@ -16,10 +15,10 @@ int main(){
         cout << "<1> Add a movie \n<2> Increase watch count \n<3> Display all movies \n<4> Exit \n\n";
         cout << "Enter your choice: "; 
         cin >> ch;
-        cin.ignore();
+        cin.ignore();   //to prevent whitespace of enter interfering with next getlines
         switch(ch){
             case 1: cout << "Enter movie name: ";
-                    getline(cin, name);
+                    getline(cin, name); //for string input with whitespaces
                     cout << "Enter movie rating: ";
                     getline(cin, movie_rate);
                     cout << "Enter watch count: ";
